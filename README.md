@@ -149,7 +149,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 ## 
 
-\\Top Successful Cases (Best Restoration):\\
+Top Successful Cases (Best Restoration):
 
 
 
@@ -169,7 +169,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 
 
-\\Failure Cases Analysis (Hardest Degradations):\\
+Failure Cases Analysis (Hardest Degradations):
 
 
 
