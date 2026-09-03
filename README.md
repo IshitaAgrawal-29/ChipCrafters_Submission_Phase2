@@ -274,8 +274,3 @@ Dataset (Phase 1) derived from the NFFA-EUROPE 100% SEM Dataset, used under CC-B
 |Member|Ishita Agrawal|
 |Member|Anjali Dadipally|
 |Member|Vaishnavi Maranhole|
-
-## License
-
-Add your chosen license here (e.g. MIT) — check dataset terms (CC-BY 4.0 for NFFA-EUROPE) if redistributing any data.
-
