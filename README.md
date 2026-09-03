@@ -256,7 +256,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 <p align="center">
 
-&#x20; <img src=""Assets\BestRestorations.png"">
+&#x20; <img src="Assets\BestRestorations.png" alt="Best Restorations">
 
 </p>
 
