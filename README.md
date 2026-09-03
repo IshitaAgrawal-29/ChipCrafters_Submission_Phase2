@@ -274,3 +274,9 @@ Dataset (Phase 1) derived from the NFFA-EUROPE 100% SEM Dataset, used under CC-B
 |Member|Ishita Agrawal|
 |Member|Anjali Dadipally|
 |Member|Vaishnavi Maranhole|
+
+### 1. Clone & Install
+```bash
+git clone [https://github.com/IshitaAgrawal-29/ChipCrafters_Submission.git](https://github.com/IshitaAgrawal-29/ChipCrafters_Submission.git)
+cd ChipCrafters_Submission_Phase2
+pip install -r requirements.txt
