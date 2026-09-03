@@ -256,7 +256,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 <p align="center">
 
-&#x20; <img src="Assets/best\_restorations.png" alt="Best Restorations">
+&#x20; <img src=""Assets\Best Restorations.png"">
 
 </p>
 
@@ -266,7 +266,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 <p align="center">
 
-&#x20; <img src="Assets/worst\_failures.png" alt="Worst Failures">
+&#x20; <img src="Assets/worst_failures.png" alt="Worst Failures">
 
 </p>
 
