@@ -62,7 +62,7 @@ Key design principle: the model predicts a **residual correction on top of a bic
 
 
 
-; <img src="Assets/Pipeline.png" alt="Restoration Pipeline">
+<img src="Assets/Pipeline.png" alt="Restoration Pipeline">
 
 
 
@@ -92,7 +92,7 @@ Restoration is fully end-to-end: **one forward pass** performs denoising and 2x 
 
 
 
-; <img src="Assets/architecture.png" alt="NAFNet-SR Architecture">
+<img src="Assets/architecture.png" alt="NAFNet-SR Architecture">
 
 
 
@@ -149,7 +149,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 ## 
 
-\\\*Top Successful Cases (Best Restoration):\\\*
+\\Top Successful Cases (Best Restoration):\\
 
 
 
@@ -157,7 +157,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 
 
-; <img src="Assets/BestRestorations.png" alt="Best Restorations">
+<img src="Assets/BestRestorations.png" alt="Best Restorations">
 
 
 
@@ -169,7 +169,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 
 
-\\\*Failure Cases Analysis (Hardest Degradations):\\\*
+\\Failure Cases Analysis (Hardest Degradations):\\
 
 
 
@@ -177,7 +177,7 @@ Two experimental alternatives were also evaluated for comparison and ultimately 
 
 
 
-; <img src="Assets/WorstFailures.png" alt="Worst Failures">
+<img src="Assets/WorstFailures.png" alt="Worst Failures">
 
 
 
