@@ -13,30 +13,6 @@ Joint 2x super-resolution and multi-source denoising for high-speed SEM wafer in
   <img alt="Status" src="https://img.shields.io/badge/Phase-2%20Complete-success">
 </p>
 
-\---
-
-## Table of Contents
-
-* [Problem Statement](#problem-statement)
-* [Our Approach](#our-approach)
-* [Architecture](#architecture)
-* [Loss Function](#loss-function)
-* [Training Strategy](#training-strategy)
-* [Results](#results)
-* [Repository Structure](#repository-structure)
-* [Getting Started](#getting-started)
-
-  * [Installation](#installation)
-  * [Data Preparation](#data-preparation)
-  * [Training](#training)
-  * [Evaluation / Inference](#evaluation--inference)
-* [Innovation Highlights](#innovation-highlights)
-* [Tech Stack](#tech-stack)
-* [References](#references)
-* [Team](#team)
-* [License](#license)
-
-\---
 
 ## Problem Statement
 
@@ -76,9 +52,9 @@ Key design principle: the model predicts a **residual correction on top of a bic
 
 |Component|Detail|
 |-|-|
-|Encoder|3 stages, `\\\[2, 2, 4]` blocks, channels `48 → 96 → 192 → 384`|
+|Encoder|3 stages, `[2, 2, 4]` blocks, channels `48 → 96 → 192 → 384`|
 |Bottleneck|2 NAFBlocks on the compressed representation|
-|Decoder|3 stages, `\\\[2, 2, 2]` blocks, PixelShuffle upsampling + encoder skip connections|
+|Decoder|3 stages, `[2, 2, 2]` blocks, PixelShuffle upsampling + encoder skip connections|
 |Block design|SimpleGate activation + Spatial/Channel Attention (squeeze-and-excitation) instead of conventional nonlinearities — better gradient flow|
 |Upsampling|Sub-pixel PixelShuffle convolutions for artifact-free 2x super-resolution|
 |Output|Residual added to a bicubic-upsampled version of the input|
@@ -184,36 +160,13 @@ Failure Cases Analysis (Hardest Degradations):
 </p>
 
 
-
-## Repository Structure
-
-```
-.
-├── data/                     # NoisyLR/ and GT/ .npy pairs (not included — see Data Preparation)
-├── src/
-│   ├── config.py              # Config class — hyperparameters, paths
-│   ├── dataset.py              # Dataset discovery, pairing, augmentation (CutBlur, flips, noise)
-│   ├── model.py                # NAFNetSR + NAFBlock definitions
-│   ├── losses.py                # HackathonRestorationLoss (Charbonnier + MS-SSIM + FFT + VGG16)
-│   ├── ema.py                    # EMA weight wrapper
-│   ├── train.py                   # Training loop, checkpointing, scheduler
-│   └── evaluate.py                 # PSNR / SSIM / LPIPS evaluation utilities
-├── scripts/
-│   ├── run\\\_inference.py       # Standalone evaluation script (CLI: --test-dir --output-dir)
-│   └── benchmark\\\_inference.py # End-to-end H100 inference-time benchmark
-├── notebooks/
-│   └── kla-ps-semicon26.ipynb # Kaggle training/experimentation notebook
-├── requirements.txt            # pip freeze environment spec
-└── README.md
-```
-
 ## Getting Started
 
-### Installation
+### Clone & Installation
 
-```bash
-git clone https://github.com/<your-org>/<your-repo>.git
-cd <your-repo>
+```
+git clone https://github.com/IshitaAgrawal-29/ChipCrafters_Submission_Phase2.git
+cd ChipCrafters_Submission_Phase2
 pip install -r requirements.txt
 ```
 
@@ -227,14 +180,6 @@ Place paired `.npy` files under `data/NoisyLR/` and `data/GT/`, matched by numer
 
 ```bash
 python src/train.py --data-dir data/ --epochs 45 --batch-size 8
-```
-
-### Evaluation / Inference
-
-Standalone, non-notebook script that accepts a test directory and output directory (as required by the KLA submission format):
-
-```bash
-python scripts/run\\\_inference.py --test-dir <path/to/test> --output-dir <path/to/output>
 ```
 
 This produces restored images and reports PSNR / SSIM / LPIPS, plus an end-to-end inference-time benchmark (I/O + batching + inference) suitable for H100 evaluation.
@@ -274,9 +219,3 @@ Dataset (Phase 1) derived from the NFFA-EUROPE 100% SEM Dataset, used under CC-B
 |Member|Ishita Agrawal|
 |Member|Anjali Dadipally|
 |Member|Vaishnavi Maranhole|
-
-### 1. Clone & Install
-```bash
-git clone https://github.com/IshitaAgrawal-29/ChipCrafters_Submission_Phase2.git
-cd ChipCrafters_Submission_Phase2
-pip install -r requirements.txt
